@@ -63,15 +63,8 @@ module.exports.pair = function (socket) {
 
 			console.log(`Anna: list ${results.length} devices`);
 
-			if (results.length > 0) {
-
-				// Return response
-				callback(null, results);
-			} else {
-
-				// Return response
-				callback(__('pair.error'), []);
-			}
+			// Return response
+			return callback(null, results);
 		});
 	});
 
